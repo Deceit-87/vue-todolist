@@ -51,9 +51,25 @@ input [type="button"]{
     gap: 15px;
     border-radius: 8px;
     border: 1px solid #aaa;
-    padding: 10px;
+    padding: 0px 10px;
 }
 .done p{
     text-decoration: line-through;
     color: rgb(141, 221, 21);
+    text-transform: uppercase;
+}
+
+
+h3 {
+   width: 20%;
+    text-align: center;
+    margin: 0 auto;
+    color: red;
+    background-color: #ddd;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
+p{
+    padding: 5px;
+    cursor: pointer;
 }

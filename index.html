@@ -15,7 +15,9 @@
             <input type="button" value="add" @click="addTodo" >
         </div>
         <div class="list-wrapper">
+            <h3 v-if="emptyList()">La tua lista è vuota!</h3>
             <ul class="todo-list" >
+                
                <li v-for="(element,index) in todoList"
                  class="todo"
                  :class="(element.done === true)? done :'' "

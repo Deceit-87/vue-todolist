@@ -2,10 +2,7 @@ const app = new Vue({
     el : '#app',
     data: {
         newTodo:'',
-        todoList:[{
-            obbiettivo: 'fare la spesa',
-            done: true ,
-        },
+        todoList:[
          
 
         ],
@@ -42,6 +39,16 @@ const app = new Vue({
 
                 element.done = false;
             
+        },
+
+        emptyList: function(){
+            if(this.todoList.length < 1){
+                return true;
+                console.log(this.todoList.length)
+
+            }
+          
+           
         }
     }
        

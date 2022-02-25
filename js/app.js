@@ -9,11 +9,13 @@ const app = new Vue({
          
 
         ],
-        done:".done",
+        done:"done",
         
     },
-    methods: {
-        addTodo: function(){
+    methods:
+   {
+        addTodo: function()
+        {
             this.newTodo = {
                 obbiettivo: this.newTodo,
                 done: false,
@@ -21,15 +23,27 @@ const app = new Vue({
             if( this.newTodo !== '' )
             this.todoList.push(this.newTodo);
             this.newTodo = '';
-            console.log(this.todoList)
-            console.log(item.done)
         },
-        removeTodo(i){
+        removeTodo(i)
+        {
             this.todoList.splice(i,1);
 
 
+        },
+      
+        objDone: function(element)
+        { 
+            
+            if(element.done == false)
+            {
+                element.done = true;
+            }
+            else 
+
+                element.done = false;
+            
         }
-        
     }
-    
+       
+        
 })

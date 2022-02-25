@@ -15,11 +15,18 @@
             <input type="button" value="add" @click="addTodo" >
         </div>
         <div class="list-wrapper">
-            <ul class="todo-list">
+            <ul class="todo-list" >
                <li v-for="(element,index) in todoList"
-                 class="todo" >
-                {{ element.obbiettivo}}
-                <i class="fa-solid fa-circle-xmark"  @click="removeTodo(index)"></i>
+                 class="todo"
+                 :class="(element.done === true)? done :'' "
+                 >
+                   <p @click="objDone(element)">
+                    {{ element.obbiettivo}}
+                    {{element.done}}
+                   </p>
+                    <i class="fa-solid fa-circle-xmark"  
+                    @click="removeTodo(index)">
+                    </i>
                </li>
                <!-- <li class="todo">riguardare lezione</li>
                <li class="todo">riguardare lezione</li>
